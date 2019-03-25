@@ -20,10 +20,11 @@ public class Student {
     }
 
     public Lab getLab(String labName) {
-        Lab lab = get
-        if(this.labList.contains()){
-            Integer index = labList.indexOf(labName);
-            return labList.get(index);
+        for(Lab lab: labList) {
+            if (lab.getName().equals(labName)) {
+                Integer index = labList.indexOf(lab);
+                return labList.get(index);
+            }
         }
 
         return null;
@@ -44,6 +45,12 @@ public class Student {
     }
 
     public LabStatus getLabStatus(String labName) {
-        return null;
+        for(Lab lab: labList) {
+            if (lab.getName().equals(labName)) {
+                Integer index = labList.indexOf(lab);
+                return labList.get(index).labStatus;
+            }
+        }
+       return null;
     }
 }
