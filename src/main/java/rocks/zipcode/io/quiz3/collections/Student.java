@@ -2,10 +2,7 @@ package rocks.zipcode.io.quiz3.collections;
 
 import rocks.zipcode.io.quiz3.fundamentals.StringUtils;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author leon on 10/12/2018.
@@ -59,6 +56,7 @@ public class Student {
     @Override
     public String toString(){
         StringBuilder builder = new StringBuilder();
+        Collections.sort(labList);
         for (Lab lab: labList){
             builder.append(lab.getName());
             builder.append(" > ");
@@ -66,6 +64,8 @@ public class Student {
             builder.append("\n");
         }
         builder.deleteCharAt(builder.length()-1);
+
+
 
         return builder.toString();
     }

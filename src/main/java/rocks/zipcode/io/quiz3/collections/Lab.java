@@ -1,9 +1,11 @@
 package rocks.zipcode.io.quiz3.collections;
 
+import java.util.Comparator;
+
 /**
  * @author leon on 10/12/2018.
  */
-public class Lab implements Comparable<Lab> {
+public class Lab implements Comparable<Lab>  {
     String labName = "";
     LabStatus labStatus;
 
@@ -31,4 +33,9 @@ public class Lab implements Comparable<Lab> {
     public int compareTo(Lab o) {
         return labName.compareTo(o.getName());
     }
+
+//    @Override
+//    public int compare(Lab o1, Lab o2) {
+//        return o1.labName.compareTo(o2.labName);
+//    }
 }
