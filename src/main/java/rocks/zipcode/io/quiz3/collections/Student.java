@@ -1,5 +1,7 @@
 package rocks.zipcode.io.quiz3.collections;
 
+import rocks.zipcode.io.quiz3.fundamentals.StringUtils;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -52,5 +54,19 @@ public class Student {
             }
         }
        return null;
+    }
+
+    @Override
+    public String toString(){
+        StringBuilder builder = new StringBuilder();
+        for (Lab lab: labList){
+            builder.append(lab.getName());
+            builder.append(" > ");
+            builder.append(lab.getStatus());
+            builder.append("\n");
+        }
+        builder.deleteCharAt(builder.length()-1);
+
+        return builder.toString();
     }
 }
